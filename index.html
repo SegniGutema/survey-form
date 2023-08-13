@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+
+    <style>
+      body {
+        background-color: #050607;
+      }
+      form {
+        background-color: #1b1818;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 800px;
+        min-width: 300px;
+        padding: 30px 0 30px 25px;
+        font-size: 18px;
+        border-radius: 45px;
+      }
+      label {
+        display: block;
+        color: #f4fefd;
+        margin: 20px 0;
+      }
+      input,
+      select,
+      textarea {
+        display: block;
+        width: 90%;
+        margin-top: 10px;
+        background-color: #f4fefd;
+      }
+      fieldset {
+        border: none;
+      }
+      .inline {
+        display: inline-block;
+        width: unset;
+        vertical-align: middle;
+      }
+      input,
+      select {
+        min-height: 30px;
+      }
+      .radio-checkbox {
+        margin-bottom: unset;
+        margin-top: unset;
+        vertical-align: middle;
+      }
+      input[type="submit"]:hover {
+        background-color: #0ef6cc;
+        color: #1b2223;
+        box-shadow: 0 0 5px #0ef6cc;
+      }
+      input[type="submit"] {
+        width: 30%;
+        border-radius: 20px 20px;
+        display: block;
+        margin: 25px auto 30px auto;
+        height: 40px;
+        border-color: #0ef6cc;
+        color: #0ef6cc;
+        background-color: #1b2223;
+      }
+
+      #title {
+        margin: 30px auto;
+        color: #0ef6cc;
+        font-size: 60px;
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+      #description {
+        text-align: center;
+        color: #f4fefd;
+        margin-bottom: 20px;
+        margin-top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Workout Survey Form</h1>
+    <p id="description">
+      please be sure to fill the survey form with all necessary information
+    </p>
+    <form id="survey-form" action="" method="post">
+      <fieldset>
+        <label id="name-label" for="name"
+          >Enter your name:
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="ex. Segni Gutema"
+          />
+        </label>
+        <label id="email-label" for="email"
+          >Enter your email:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ex. segnigutema@gmail.com"
+          />
+        </label>
+        <label id="number-label" for="number"
+          >Enter your age(years):
+          <input
+            min="18"
+            max="120"
+            type="number"
+            id="number"
+            name="number"
+            required
+            placeholder="ex. 22"
+          />
+        </label>
+        <label for="dropdown">
+          Select your gender
+          <select id="dropdown">
+            <option value=""><i>select your gender</i></option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Select your workout level</label>
+        <label class="radio-checkbox" for="beginner"
+          ><input
+            class="inline"
+            type="radio"
+            name="workout-level"
+            id="beginner"
+            checked
+          />
+          Beginner
+        </label>
+        <label class="radio-checkbox" for="intermediate"
+          ><input
+            class="inline"
+            type="radio"
+            name="workout-level"
+            id="intermediate"
+          />
+          Intermediate
+        </label>
+        <label class="radio-checkbox" for="advanced"
+          ><input
+            class="inline"
+            type="radio"
+            name="workout-level"
+            id="advanced"
+          />
+          Advanced
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Pick body part you want to focus on</label>
+        <label class="radio-checkbox" for="fullbody"
+          ><input
+            class="inline"
+            type="checkbox"
+            id="fullbody"
+            name="fullbody"
+            value="fullbody"
+          />
+          Full body
+        </label>
+        <label class="radio-checkbox" for="abs"
+          ><input
+            value="abs"
+            class="inline"
+            type="checkbox"
+            id="abs"
+            name="abs"
+          />
+          Abs
+        </label>
+        <label class="radio-checkbox" for="chest"
+          ><input
+            value="chest"
+            class="inline"
+            type="checkbox"
+            id="chest"
+            name="chest"
+          />
+          Chest
+        </label>
+        <label class="radio-checkbox" for="arm"
+          ><input
+            value="arm"
+            class="inline"
+            type="checkbox"
+            id="arm"
+            name="arm"
+          />
+          Arm
+        </label>
+        <label class="radio-checkbox" for="leg"
+          ><input
+            value="leg"
+            class="inline"
+            type="checkbox"
+            id="leg"
+            name="leg"
+          />
+          leg
+        </label>
+        <label class="radio-checkbox" for="back-and-shoulder"
+          ><input
+            type="checkbox"
+            id="back-and-shoulder"
+            name="back-and-shoulder"
+            class="inline"
+            value="back-and-shoulder"
+          />
+          Back and shoulder</label
+        >
+      </fieldset>
+      <fieldset>
+        <label></label>
+        <label for="quote">
+          Enter your favorite gym quote:
+          <textarea
+            id="quote"
+            placeholder="Write your favorite gym quote here"
+            cols="30"
+            rows="6"
+          ></textarea>
+        </label>
+        <input id="submit" type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
